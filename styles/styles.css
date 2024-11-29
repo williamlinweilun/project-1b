@@ -48,6 +48,79 @@
 /* we will cover this more later */
 /* END -- STYLES FOR MOBILE MENU */
 
+/* Existing styles... */
+/* Mobile-first styles */
+
+.sidebar {
+    position: fixed;
+    left: -15.625rem;
+    top: 0;
+    width: 15.625rem;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 1.25rem;
+    box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
+    overflow-y: auto;
+    transition: transform 0.3s ease, left 0.3s ease;
+}
+
+.sidebar.open {
+    transform: translateX(15.625rem);
+}
+
+.sidebar ul {
+    list-style-type: none;
+	padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: .625rem;
+}
+
+.sub-topic {
+	padding: .5rem 0 .5rem 1rem;
+}
+
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.toggle-button {
+    display: block;
+    position: fixed;
+    left: .625rem;
+    top: .625rem;
+    background-color: #f4f4f4;
+    border: none;
+    padding: .625rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: .125rem .125rem .3125rem rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+}
+
+
+.toggle-button.open {
+    left: 16.25rem;
+    transform: rotate(180deg);
+}
+
+
+@media (min-width: 50rem) {
+    .sidebar {
+        transform: translateX(0);
+        left: 0;
+    }
+
+    .toggle-button {
+        display: none;
+    }
+
+}
+
+
 
 /* Main
 --------------------------------------------- */
