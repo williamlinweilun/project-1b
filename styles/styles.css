@@ -52,6 +52,7 @@
 /* Mobile-first styles */
 
 .sidebar {
+	font-size: 1.1rem;
     position: fixed;
     left: -15.625rem;
     top: 0;
@@ -59,7 +60,7 @@
     height: 100vh;
     background-color: #f4f4f4;
     padding: 1.25rem;
-    box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
+    box-shadow: .125rem 0 .5rem rgba(0,0,0,0.1);
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
 }
@@ -68,33 +69,44 @@
     transform: translateX(15.625rem);
 }
 
+.sidebar p {
+	font-size: 1rem;
+	text-align: center;
+}
+
 .sidebar ul {
     list-style-type: none;
 	padding: 0;
 }
 
-.sidebar li {
-    margin-bottom: .625rem;
-}
-
-.sub-topic {
-	padding: .5rem 0 .5rem 1rem;
-}
-
-
-.sidebar a {
+.site-navigation a {
     text-decoration: none;
     color: #333;
 }
 
+.sidebar a:hover { 
+	background-color: #999999;
+}
+
+.main-topic {
+    margin-bottom: .2rem;
+	padding: .5rem;
+}
+
+.sub-topic li {
+	padding: 0 0 .5rem 1rem;
+}
+
 .toggle-button {
+	font-size: 1.2rem;
+	font-weight: bolder;
     display: block;
     position: fixed;
-    left: .625rem;
-    top: .625rem;
+    left: .5rem;
+    top: .5rem;
     background-color: #f4f4f4;
     border: none;
-    padding: .625rem;
+    padding: .6rem 1rem .6rem 1rem;
     cursor: pointer;
     z-index: 1000;
     box-shadow: .125rem .125rem .3125rem rgba(0,0,0,0.1);
