@@ -3,40 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
+    <title>document</title>
+    <link rel="stylesheet" href="styles/normalize-fwd.css" />
 
-<body>
+    <!-- Add  the google font roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/script.js" defer></script>
+  </head>
 
-    <header>
-
-    </header>
-
+  <body>
+    <header><h1>TechTalks</h1></header>
 
     <main>
+      <section class="header-image"></section>
 
-        <section class="header-image">
+      <section class="main-content"></section>
 
+      <section class="demonstration">
+        <div class="weather-container">
+          <h1>Weather Application</h1>
+          <input type="text" id="city" placeholder="Enter city name" />
+          <button id="getWeatherBtn">Get Weather</button>
 
-        </section>
+          <div id="weatherResult">
+            <h1 id="cityName"></h1>
+            <h2 id="temperature"></h2>
+            <span id="feelLike"></span>
 
-        
-
-
-        <section class="main-content">
-
-        </section>
-
-
-        <section class="demonstration"></section>
-
+            <p id="description"></p>
+            <p id="weatherImage"></p>
+            <div class="subforecasts">
+              <p id="humidity"></p>
+              <p id="windSpeed"></p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-
-    <footer>
-
-    </footer>
-
-</body>
+    <footer></footer>
+  </body>
 </html>
-
