@@ -165,14 +165,16 @@ section{
 /* demostraion 
 --------------------------------------------- */
 .demonstration{
-	background-image:url("../images/bg-demo.jpg");
-	height: 100vh;
+	background: url('../images/bg-demo.jpg') no-repeat center center/cover; 
+	background-color: #26aedb;
+	height:100vh;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
+	padding: 1rem 1rem 1rem 2rem;
 }
 .demonstration h1 {
 	font-size: 1.6rem;
@@ -180,37 +182,41 @@ section{
   } 
 	
 .demonstration	.weather-container {
-
+      display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  gap: 1rem;
 	  text-align: center;
-	  background: linear-gradient(to right, rgba(0, 198, 255, 0.3), rgba(0, 114, 255, 0.3));
-	  padding: 30px;
+	  background: rgb(157,209,210);
+      background: linear-gradient(0deg, rgba(157,209,210,1) 22%, rgba(33,163,207,1) 93%);
+	  padding: 1.5rem;
 	  border-radius: 10px;
 	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	  opacity: 0.8;
 	}
 	
 	.demonstration  #weatherResult h1 {
-	  font-size: 1.5rem;
-	  margin: 2rem 0 1rem;
+	  font-size: 1.2rem;
+	  margin: 1rem 0rem  0rem;
 	}
   
 	.demonstration #weatherResult h2 {
-	  font-size: 1.4rem;
+	  font-size: 1.1rem;
 	  margin-bottom: 0.5rem;
 	  
 	}
 	
 	.demonstration input {
-	  padding: 10px;
+	  padding: .5rem;
 	  font-size: 1rem;
-	  margin-right: 10px;
 	  border: none;
 	  outline: none;
 	  border-radius: 4px;
+	  
 	}
 	
-  
 	.demonstration button {
-	  padding: 10px;
+	  padding: .5rem;
 	  font-size: 1rem;
 	  cursor: pointer;
 	  border: none;
@@ -219,13 +225,9 @@ section{
 	  border-radius: 4px;
 	}
 	
-	.demonstration #weatherResult {
-	  margin-top: 1.5rem;
-	}
-	
 	.demonstration #weatherResult p {
   
-	  margin: 2px 0;
+	  margin: 0.1rem 0;
 	}
 	.demonstration #cityName i{
 	  margin-right: 1rem;
@@ -234,6 +236,10 @@ section{
   
 	.demonstration #feelLike, #description {
 	 font-size: 1.2rem;
+	}
+
+	.demonstration img{
+		width: 60%;
 	}
 	.demonstration .subforecasts{
 	  display: flex;
@@ -261,13 +267,31 @@ section{
    
 /* mobile queries for demo section */
 
-@media (min-width:48em) {
-	/* .demonstration	.weather-container {
+@media (min-width:50em) {
+	 .demonstration	{
+		padding: 2rem;
 		
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-	} */
+	} 
+	.demonstration	.weather-container {
+		display: inline-block;
+		justify-content: center;
+		padding: 1.5rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	  }
+      .demonstration input {
+		margin-right: .5rem;
+		
+	  }
+
+	  .demonstration  #weatherResult h1 {
+		font-size: 1.4rem;
+		margin: 1.5rem 0rem  0rem;
+	  }
+	  .demonstration img{
+		width: 75%;
+	}
+	  
   }
 
 	/* end of the demontration section */
