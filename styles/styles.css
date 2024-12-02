@@ -158,6 +158,7 @@ section{
 /* Main
 --------------------------------------------- */
 
+
 /* Banner Image ----------------------------- */
 
 .header-image picture {
@@ -177,6 +178,14 @@ section{
 		margin-right: .9375rem;
 	}
 
+}
+
+/* Main Content ----------------------------- */
+
+.main-content {
+	font-family: "Roboto", sans-serif;
+	color: #ffffff;
+	background-color: #1F2634;
 }
 
 
