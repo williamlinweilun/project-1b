@@ -76,12 +76,12 @@ nav {
     position: fixed;
     left: -18rem;
     top: 0;
-    width: 17.5rem;
+    width: 16rem;
     height: 100vh;
     padding: 1.25rem;
     background-color: #283044;
     box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
-    border-right: 1px #798092 solid;
+    border-right: .0625rem #798092 solid;
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
 	z-index:99;
@@ -96,13 +96,18 @@ nav {
 	padding: 0;
 }
 
-.sub-topic ul {
-    font-size: .8rem;
+.main-topic {
+    font-weight: bold;
+    border-bottom: .0625rem #798092 solid;
+}
+
+.sub-topic {
     margin: .5rem 0 .5rem 0;
 }
 
-.sidebar .sub-topic li {
-    margin-left: 1.5rem; 
+.sub-topic li {
+    font-size: .9rem;
+    margin-left: 1rem; 
 }
 
 .sidebar a {
@@ -110,14 +115,13 @@ nav {
     color: #ffffff;
     padding: .5rem;
     display: block;
-    width: calc(100% - 30px);
+    width: calc(95% - 1.5rem);
     background-color: transparent;
 }
 
 .sidebar a:hover {
     background-color: #414959;
-    display: block;
-    width: 100%;
+    border-radius: .4rem;
 }
 
 .toggle-button {
