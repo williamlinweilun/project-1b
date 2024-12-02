@@ -180,15 +180,21 @@ a:hover {
 /* Main Content ----------------------------- */
 
 .main-content {
-
+    padding: 0 1.5rem;
 }
 
 @media (min-width: 50em) {
-	.main-content {
-		padding-left: 20rem;		
-	}
-
+    .main-content {
+        padding-left: 20rem;        
+    }
 }
+
+@media (min-width: 75em) {
+    .main-content {
+        padding-right: 15rem;
+    }
+}
+
 
 
 /* demostraion 
