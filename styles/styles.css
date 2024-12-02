@@ -24,13 +24,14 @@
 
 body {
 	font-family: "Roboto", sans-serif;
+    color: #ffffff;
 	font-weight: 400;
 	font-style: normal;
     font-size: 1rem;
     line-height: 1.6;
     letter-spacing: 1px;
     box-sizing: inherit;
-    background-color:#f4f0f0 ;
+	background-color: #1F2634;
 }
 /* Typography
 --------------------------------------------- */
@@ -42,25 +43,7 @@ body {
 
 /* Links
 --------------------------------------------- */
-a {
-	text-decoration: none;
-}
 
-a:visited {
-	color: #000000;
-}
-
-a:hover {
-	color: #000000;
-}
-
-a:focus {
-	color: #000000;
-}
-
-a:active {
-	color: #000000;
-}
 
 /*--------------------------------------------------------------
 # Layout
@@ -85,14 +68,18 @@ section{
 /* Sidebar
 --------------------------------------------- */
 
+nav {
+    padding-bottom: 3rem;
+}
+
 .sidebar {
     position: fixed;
     left: -18rem;
     top: 0;
     width: 16rem;
     height: 100vh;
-    background-color: #f4f4f4;
     padding: 1.25rem;
+    background-color: #283044;
     box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
@@ -109,17 +96,22 @@ section{
 }
 
 .sidebar li {
-    margin-bottom: .625rem;
+    margin: .5rem;
 }
 
 .sub-topic {
 	padding: .5rem 0 .5rem 1rem;
 }
 
-
 .sidebar a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
+}
+
+
+a:hover {
+    text-decoration: none;
+    background-color: #414959;
 }
 
 .toggle-button {
@@ -127,7 +119,6 @@ section{
     position: fixed;
     left: .625rem;
     top: .625rem;
-    background-color: #f4f4f4;
     border: none;
     padding: .625rem;
     cursor: pointer;
@@ -155,8 +146,6 @@ section{
     }
 
 }
-
-
 
 /* Main
 --------------------------------------------- */
@@ -188,7 +177,6 @@ section{
 .main-content {
 	font-family: "Roboto", sans-serif;
 	color: #ffffff;
-	background-color: #1F2634;
 }
 
 
@@ -223,8 +211,8 @@ section{
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	opacity: 0.8;
-	}
-	
+}
+
 .demonstration  #weatherResult h1 {
     font-size: 1.2rem;
     margin: 1rem 0rem  0rem;
@@ -256,6 +244,7 @@ section{
 .demonstration #weatherResult p {
 	margin: 0.1rem 0;
 }
+
 .demonstration #cityName i{
     margin-right: 1rem;
     color: #2c3e50;
@@ -299,7 +288,6 @@ section{
 @media (min-width:50em) {
 	.demonstration	{
 		padding: 2rem;
-		
 	} 
 	.demonstration	.weather-container {
 		display: inline-block;
@@ -310,13 +298,13 @@ section{
 	}
     .demonstration input {
 		margin-right: .5rem;
-		
 	}
 
 	.demonstration  #weatherResult h1 {
 		font-size: 1.4rem;
 		margin: 1.5rem 0rem  0rem;
 	}
+
     .demonstration img{
 		width: 75%;
 	}
@@ -327,11 +315,11 @@ section{
 /* Footer
 --------------------------------------------- */
 
-footer{
+footer {
 	padding: 1rem;
 }
 
-footer p{
+footer p {
 	text-align: center;
 }
 
