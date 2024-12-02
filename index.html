@@ -62,6 +62,15 @@
                         </li>
                         <li>
                             <div class="main-topic"><a href="#api-demo">API Demo</a></div>
+                            <ul class="sub-topic">
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#how-it-works">How it works</a></li>
+                                <li><a href="#api-request-format">API request format</a></li>
+                                <li><a href="#openweather">Openweather</a></li>
+                                <li><a href="#response-example">Response Example</a></li>
+                                <li><a href="#displaying-weather-data">Displaying Weather Data</a></li>
+                                <li><a href="#conclusion">Conclusion</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </nav>
@@ -187,7 +196,7 @@
 
                     <dd>They're cost-effective. Many problems you might run into when making your website may already have a third-party solution, so why waste time and money on developing your own API when you can choose from thousands of public APIs listed online? Many of these APIs are designed for easy integration, with the more popular ones often offering support, updates, and frequent bug fixes. Cut costs without cutting corners!</dd>
                     
-                    <dt id="secure-and-protect">Secure and Protect </dt>
+                    <dt id="secure-and-protect">Secure and Protect</dt>
 
                     <dd>They make your site more secure. Have you ever used the Inspect Element tool to read the content of a paywalled article? Neither have I. But if someone were to access restricted information on a website without permission, it would be terrible. Luckily, you can use a REST API to verify that users are who they say they are. Using the unique API key provided to the user, it ensures that users can only access what they are allowed to using Role-Based Access Control (RBAC). 
 
@@ -221,7 +230,6 @@
                 <p id="stripe">Stripe, an online payment processing platform easily handles all customer payment information, while reducing the risk of fraud by verifying customer through 2 factor authentication and never storing the information on a business's server 
                 it will send the confirmation of purchase and purchase details such as name, shipping address, and product info to the business to begin processing the order </p>
                 
-                
                 <p id="expedia">Expedia web api can access and book a wide range of travel products including flights, hotels, car rentals, etc. This API allows you to search, compare prices, and book travel accommodations in real time through your own website while using Expedia's travel database. </p>
                 
             </article>
@@ -229,7 +237,7 @@
             <article class="pros-and-cons" id="pros-and-cons">
                 <h2>The Pros of Web APIs:</h2>
                 
-                <h3>Reduced Development Time </h3>
+                <h3>Reduced Development Time</h3>
                 <p>Developers can use existing apis to build web applications with specific functionalities instead of building from scratch. For example when building a food-ordering web app, you want to access a list of foods. If there wasn't an API available, then you would have to build it from scratch or create a database of foods in the application which would take a lot of time.</p>
                 
                 
@@ -270,44 +278,45 @@
 
                 <p>Now I hope you have a brief idea about what web API is and what it does, here we move to see how it works in the real world application. Here we implement a weather application which provides weather details for users. </p>
                 
-
-                <h3>Features of this application.</h3>
+                <h4 id="features">Features of this application.</h4>
                 <p>This application uses the OpenWeather API to retrieve real-time weather information for any city. It allows users to input a city name and view the current weather conditions, all through a simple and user-friendly interface for a better user experience.</p>
 
-                <h3>How it works</h3>
+                <h4 id="how-it-works">How it works</h4>
                 <p>Main part of the application is API integration. Then  has app works in four steps:
                 Firstly   the user inputs a city name, then the app sends a request to the OpenWeather API,which responds with weather data, and finally the app displays the information on a webpage. This process allows users to easily view current weather conditions for any city.</p>
 
-                <h3>User interface</h3>
+                <h4 id="user-interface">User interface</h4>
                 <p>This is the app user interface which we developed.
                 In the search bar user enter the city name and clicking getweather button, after brief loading , weather data of  related cities is displayed. 
                 For example, when I enter "Edmonton" and click the button, the app fetches real-time weather data from the OpenWeather API and displays the current weather details for Edmonton.
                 These details, such as temperature, humidity, and wind speed, are sourced directly from the OpenWeather API.</p>
 
-                <h3>Sample of API request format</h3>
+                <h4 id="api-request-format">Sample of API request format</h4>
 
                 <p>This is a GET request, here pass the parameters by using  query string.It includes a query parameter (q=London) specifying the city, and an API key (appid=your-api-key) that authenticates the request. </p>
 
-                <h3>How to create a API key in Openweather </h3>
+                <h4 id="openweather">How to create a API key in Openweather </h4>
                 <p>This is a straightforward one. You can easily follow. Create an account or if you have one login.  and navigate to the API section and generate a key. Then you can use the created  api key for your API request.</p>
 
-                <h3>API Response Example</h3>
+                <h4 id="response-example">API Response Example</h4>
                 <p>The response from the OpenWeather API will be a JSON object containing detailed weather information for the city which the user entered. </p>
 
                 <p>The data will be structured with keys like main, weather, and wind, providing values like temperature in Celsius, weather conditions (e.g., "clear sky"), and wind speed in meters per second.</p>
 
 
-                <h3>Displaying Weather Data</h3>
+                <h4 id="displaying-weather-data">Displaying Weather Data</h4>
                 <p>Once the data is fetched, the app extracts the relevant details and displays them in a clean and readable format on the user interface. This is the full Javascript  source code for of our application</p>
 
-                <h3>Conclusion</h3>
+                <h4 id="conclusion">Conclusion</h4>
                 <p>Finally as a Conclusion I can says that
                 This weather app provides users with an easy way to check the weather in any city using real-time data fetched from the OpenWeather API.
                 I suggest future enhancements to
                 include hourly and daily forecasts, add features for more weather parameters like pressure, visibility, etc., and improve UI/UX for better user experience.
                 </p>
+
                     
             </article>    
+
 
         </section>
 
@@ -344,5 +353,5 @@
         <p>For Educational Purposes</p>
     </footer>
 </body>
-  
+
 </html>
