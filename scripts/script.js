@@ -1,32 +1,3 @@
-// Get the API key from OpenWeatherMap
-const apiKey = "7a2e01155bf2a4fc836a19d9f99380bc"; // Replace with your actual API key
-
-// Elements from the DOM
-const cityInput = document.getElementById("city");
-const getWeatherBtn = document.getElementById("getWeatherBtn");
-const weatherResult = document.getElementById("weatherResult");
-const cityName = document.getElementById("cityName");
-const temperature = document.getElementById("temperature");
-const description = document.getElementById("description");
-const humidity = document.getElementById("humidity");
-const windSpeed = document.getElementById("windSpeed");
-const weatherIcon = document.getElementById("weatherImage");
-const feelLike = document.getElementById("feelLike");
-
-weatherResult.style.display = "none";
-
-// Event listener for the "Get Weather" button
-getWeatherBtn.addEventListener("click", function () {
-  const city = cityInput.value;
-
-  if (!city) {
-    alert("Please enter a city name");
-    return;
-  }
-
-  // Fetch the weather data from the API
-  fetchWeatherData(city);
-});
 
 // Fetch weather data from OpenWeatherMap API
 function fetchWeatherData(city) {

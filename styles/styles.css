@@ -22,17 +22,17 @@
 --------------------------------------------------------------*/
 
 
-body{
+body {
 	font-family: "Roboto", sans-serif;
+    color: #ffffff;
 	font-weight: 400;
 	font-style: normal;
     font-size: 1rem;
     line-height: 1.6;
     letter-spacing: 1px;
     box-sizing: inherit;
-    background-color:#f4f0f0 ;
-   
-  }
+	background-color: #1F2634;
+}
 /* Typography
 --------------------------------------------- */
 
@@ -43,25 +43,7 @@ body{
 
 /* Links
 --------------------------------------------- */
-a {
-	text-decoration: none;
-}
 
-a:visited {
-	color: #000000;
-}
-
-a:hover {
-	color: #000000;
-}
-
-a:focus {
-	color: #000000;
-}
-
-a:active {
-	color: #000000;
-}
 
 /*--------------------------------------------------------------
 # Layout
@@ -83,14 +65,21 @@ section{
 /* Existing styles... */
 /* Mobile-first styles */
 
+/* Sidebar
+--------------------------------------------- */
+
+nav {
+    padding-bottom: 3rem;
+}
+
 .sidebar {
     position: fixed;
-    left: -15.625rem;
+    left: -18rem;
     top: 0;
-    width: 15.625rem;
+    width: 16rem;
     height: 100vh;
-    background-color: #f4f4f4;
     padding: 1.25rem;
+    background-color: #283044;
     box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
@@ -98,7 +87,7 @@ section{
 }
 
 .sidebar.open {
-    transform: translateX(15.625rem);
+    transform: translateX(17rem);
 }
 
 .sidebar ul {
@@ -107,17 +96,22 @@ section{
 }
 
 .sidebar li {
-    margin-bottom: .625rem;
+    margin: .5rem;
 }
 
 .sub-topic {
 	padding: .5rem 0 .5rem 1rem;
 }
 
-
 .sidebar a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
+}
+
+
+a:hover {
+    text-decoration: none;
+    background-color: #414959;
 }
 
 .toggle-button {
@@ -125,7 +119,6 @@ section{
     position: fixed;
     left: .625rem;
     top: .625rem;
-    background-color: #f4f4f4;
     border: none;
     padding: .625rem;
     cursor: pointer;
@@ -141,7 +134,8 @@ section{
 }
 
 
-@media (min-width: 50rem) {
+@media (min-width: 50rem) { 
+
     .sidebar {
         transform: translateX(0);
         left: 0;
@@ -152,8 +146,6 @@ section{
     }
 
 }
-
-
 
 /* Main
 --------------------------------------------- */
@@ -185,17 +177,13 @@ section{
 .main-content {
 	font-family: "Roboto", sans-serif;
 	color: #ffffff;
-	background-color: #1F2634;
-}
 
-
-/* Sidebar
---------------------------------------------- */
 
 
 /* demostraion 
 --------------------------------------------- */
-.demonstration{
+
+.demonstration {
 	background: url('../images/bg-demo.jpg') no-repeat center center/cover; 
 	background-color: #26aedb;
 	height:100vh;
@@ -210,9 +198,106 @@ section{
 .demonstration h1 {
 	font-size: 1.6rem;
 	margin: 1rem 0 ;
-  } 
-	
+} 
+
 .demonstration	.weather-container {
+
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+	text-align: center;
+	background: rgb(157,209,210);
+  background: linear-gradient(0deg, rgba(157,209,210,1) 22%, rgba(33,163,207,1) 93%);
+	padding: 1.5rem;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	opacity: 0.8;
+}
+
+.demonstration  #weatherResult h1 {
+    font-size: 1.2rem;
+    margin: 1rem 0rem  0rem;
+}
+
+.demonstration #weatherResult h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.demonstration input {
+    padding: .5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.demonstration button {
+    padding: .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 4px;
+}
+
+.demonstration #weatherResult p {
+	margin: 0.1rem 0;
+}
+
+.demonstration #cityName i{
+    margin-right: 1rem;
+    color: #2c3e50;
+}
+
+.demonstration #feelLike, #description {
+    font-size: 1.2rem;
+}
+
+.demonstration img {
+	width: 60%;
+}
+
+.demonstration .subforecasts {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.demonstration .subforecasts p {
+    flex: 1;  
+    background: linear-gradient(to top, #2c3e50, #34495e);
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 0.8rem;
+}
+
+.demonstration .subforecasts i {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.demonstration .subforecasts span {
+    font-size: 0.6rem;
+}
+
+/* mobile queries for demo section */
+
+@media (min-width:50em) {
+	.demonstration	{
+		padding: 2rem;
+	} 
+	.demonstration	.weather-container {
+		display: inline-block;
+		justify-content: center;
+		padding: 1.5rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+=======
       display: flex;
 	  flex-direction: column;
 	  justify-content: center;
@@ -269,34 +354,30 @@ section{
 	 font-size: 1.2rem;
 	}
 
-	.demonstration img{
+	.demonstration img {
 		width: 60%;
 	}
-	.demonstration .subforecasts{
+	.demonstration .subforecasts {
 	  display: flex;
 	  justify-content: center;
 	  gap: 3rem;
+
 	}
-	.demonstration .subforecasts p{
-	  flex: 1;  
-	  background: linear-gradient(to top, #2c3e50, #34495e);
-	  text-align: center;
-	  padding: 0.5rem;
-	  border-radius: 10px;
-	  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-	  font-size: 0.8rem;
+    .demonstration input {
+		margin-right: .5rem;
 	}
-	
-	.demonstration .subforecasts i{
-	  margin-bottom: 0.5rem;
-	  font-size: 1.5rem;
+
+	.demonstration  #weatherResult h1 {
+		font-size: 1.4rem;
+		margin: 1.5rem 0rem  0rem;
 	}
-  
-	.demonstration .subforecasts span{
-	  font-size: 0.6rem;
+
+    .demonstration img{
+		width: 75%;
 	}
-   
-/* mobile queries for demo section */
+
+
+}
 
 @media (min-width:50em) {
 	 .demonstration	{
@@ -325,20 +406,22 @@ section{
 	  
   }
 
-	/* end of the demontration section */
+
+/* end of the demontration section */
 /* Footer
 --------------------------------------------- */
 
-footer{
+
+footer {
 	padding: 1rem;
 }
 
-footer p{
+footer p {
 	text-align: center;
 }
 
 @media (min-width: 50em) {
-	footer{
+	footer {
 		margin-left: 17.1875rem;
 	}
 }
