@@ -36,6 +36,11 @@ body {
 /* Typography
 --------------------------------------------- */
 
+h1,
+h2 {
+	padding: 2rem 0;
+	text-align: center;
+}
 
 
 /* Elements
@@ -184,8 +189,13 @@ nav {
 /* Main Content ----------------------------- */
 
 .main-content {
-	font-family: "Roboto", sans-serif;
-	color: #ffffff;
+}
+
+@media (min-width: 50em) {
+	.main-content {
+		padding-left: 20rem;		
+	}
+
 }
 
 
