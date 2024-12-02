@@ -42,7 +42,6 @@ function fetchWeatherData(city) {
 }
 
 //sidebar
-
 document.getElementById('toggle-button').addEventListener('click', function() {
   var sidebar = document.getElementById('sidebar');
   var button = document.getElementById('toggle-button');
@@ -54,3 +53,14 @@ document.getElementById('toggle-button').addEventListener('click', function() {
       button.classList.add('open');
   }
 });
+
+//smooth scroll
+document.querySelectorAll('.sidebar a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+});
+
