@@ -157,6 +157,27 @@ section{
 /* Main
 --------------------------------------------- */
 
+/* Banner Image ----------------------------- */
+
+.header-image picture {
+	display: block;
+}
+
+.header-image {
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 50em) {
+
+	.header-image {
+		/* margin-left is 275px - referenced from side-bar's width 250px */
+		margin-left: 17.1875rem; 
+		margin-right: .9375rem;
+	}
+
+}
+
 
 /* Sidebar
 --------------------------------------------- */
