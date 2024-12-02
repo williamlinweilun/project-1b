@@ -101,7 +101,9 @@
 
         <section class="main-content">
 
-            <h2>Web API</h2>
+
+            <h1> Web API</h1>
+
             
             <section class="what-is-it" id="what-is-web-api">
                 
@@ -118,7 +120,7 @@
                 Likewise,
                 WE (the client) sends our request to the Server (the kitchen) through the help of the waiter (in this case the API) .</p>
 
-                <h3>What Is Web API?</h3>
+                <h2>What Is Web API?</h2>
 
                 <p>It is a specific type of API that operates over the web.  It operates using HTTP requests to enable communication between a web server and a client (a web browser, website etc.). One type of it is REST API .REST stands for “Representational State Transfer”. It's a standardized software architecture style that is industry known and used. Web companies use it, google, facebook, netflix.. </p>
 
@@ -163,7 +165,7 @@
                 
             <section class="why-would-you-use-it" id="why-would-you-use-it"> 
 
-                <h3>Why would you use REST API?</h3>
+                <h2>Why would you use REST API?</h2>
 
                 <p>Now that we know what REST APIs are, why would you use them?</p>
 
@@ -173,9 +175,9 @@
 
                     <dd>They're easy to understand. REST APIs use RESTful (or Clean) URLs, which are web addresses designed to be easy to read and understood by non-expert users (i.e. you, probably). These URLs are structured to reflect the resources they represent, making it intuitive for both users and developers.</dd>
                 
-                    Non-RESTful URL: [ getArticle?id=30&category=comments ]
+                    <p>Non-RESTful URL: [ getArticle?id=30&category=comments ]</p>
 
-                    RESTful URL: [ /articles/30/comments ]
+                    <p>RESTful URL: [ /articles/30/comments ]</p>
 
                     <dt id="streamlined-experience">Streamlined Experienced</dt>
 
@@ -208,7 +210,7 @@
             </section>
 
             <section class="where-would-you-use-it" id="where-would-you-use-api">
-                <h3>Where Would You Use Web APIs?</h3>
+                <h2>Where Would You Use Web APIs?</h2>
 
                 <p id="social-media">For Social Media Web API, for example in Spotify and Airbnb, it allows you to integrate your social media accounts for a quick and easy log in and eliminates the need to remember new passwords. It also allows you to share your favourite playlists in spotify or share Airbnb listings to whoever you want. </p>
                 
@@ -225,39 +227,39 @@
             </section>
 
             <section class="pros-and-cons" id="pros-and-cons">
-                <h3>The Pros of Web APIs:</h3>
+                <h2>The Pros of Web APIs:</h2>
                 
-                <h4>reduced development time </h4>
-                <p>developers can use existing apis to build web applications with specific functionalities instead of building from scratch. For example when building a food-ordering web app, you want to access a list of foods. If there wasn't an API available, then you would have to build it from scratch or create a database of foods in the application which would take a lot of time.</p>
-                
-                
-                <h4>better user experience</h4> 
-                <p>through displaying real time information, better security and privacy, increased functionalities,  and much more depending on the Web API you choose to use </p>
+                <h3>Reduced Development Time </h3>
+                <p>Developers can use existing apis to build web applications with specific functionalities instead of building from scratch. For example when building a food-ordering web app, you want to access a list of foods. If there wasn't an API available, then you would have to build it from scratch or create a database of foods in the application which would take a lot of time.</p>
                 
                 
-                <h4>improved efficiency</h4> 
-                <p>as API driven infrastructures enable developers to reuse code and functionality from existing software systems, saving time and reducing the amount of code that needs to be written from scratch</p>
+                <h3>Better User Experience</h3> 
+                <p>Through displaying real time information, better security and privacy, increased functionalities,  and much more depending on the Web API you choose to use. </p>
                 
                 
-                <h4>And Web APIs are cost effective </h4>
+                <h3>Improved Efficiency</h3> 
+                <p>As API driven infrastructures enable developers to reuse code and functionality from existing software systems, saving time and reducing the amount of code that needs to be written from scratch.</p>
+                
+                
+                <h3>Web APIs are cost effective </h3>
                 <p>because instead of having to develop the feature on your website you can use the web api</p> 
                 
                 
-                <h3>The Cons of Web APIs</h3> 
+                <h2>The Cons of Web APIs</h2> 
                 
-                <h4>Security Concerns</h4>
+                <h3>Security Concerns</h3>
                 <p>There are, however, some cons to Web API. There are some security concerns as API infrastructures can be vulnerable to security breaches, which makes it incredibly important to implement security measures. </p>
                 
-                <h4>Compatibility</h4>
+                <h3>Compatibility</h3>
                 <p>There can be compatibility issues, as Web APIs can have issues between different versions of the same software, which can lead to system failures.</p>
                 
-                <h4>Dependency On Third Party Developers</h4>
+                <h3>Dependency On Third Party Developers</h3>
                 <p>APIs also create a dependency on third party developers, as APIs rely on other developers to create applications that are integrated to your website which are outside of your control </p>
                 
-                <h4>Customization</h4>
+                <h3>Customization</h3>
                 <p>There is also limited customization, as you're using pre built functionalities offered by the API</p>
                 
-                <h4>Performance Issues</h4>
+                <h3>Performance Issues</h3>
                 <p>And finally, there may be performance issues, such as network latency due to responsiveness of the API provider's servers, which may affect responsiveness of your website. There may sometimes be potential changes that may require you to update the API on your end as it may disrupt functionality if not handled properly </p>
 
             </section>
@@ -269,36 +271,36 @@
                 <p>Now I hope you have a brief idea about what web API is and what it does, here we move to see how it works in the real world application. Here we implement a weather application which provides weather details for users. </p>
                 
 
-                <h4>Features of this application.</h4>
+                <h3>Features of this application.</h3>
                 <p>This application uses the OpenWeather API to retrieve real-time weather information for any city. It allows users to input a city name and view the current weather conditions, all through a simple and user-friendly interface for a better user experience.</p>
 
-                <h4>How it works</h4>
+                <h3>How it works</h3>
                 <p>Main part of the application is API integration. Then  has app works in four steps:
                 Firstly   the user inputs a city name, then the app sends a request to the OpenWeather API,which responds with weather data, and finally the app displays the information on a webpage. This process allows users to easily view current weather conditions for any city.</p>
 
-                <h4>User interface</h4>
+                <h3>User interface</h3>
                 <p>This is the app user interface which we developed.
                 In the search bar user enter the city name and clicking getweather button, after brief loading , weather data of  related cities is displayed. 
                 For example, when I enter "Edmonton" and click the button, the app fetches real-time weather data from the OpenWeather API and displays the current weather details for Edmonton.
                 These details, such as temperature, humidity, and wind speed, are sourced directly from the OpenWeather API.</p>
 
-                <h4>Sample of API request format</h4>
+                <h3>Sample of API request format</h3>
 
                 <p>This is a GET request, here pass the parameters by using  query string.It includes a query parameter (q=London) specifying the city, and an API key (appid=your-api-key) that authenticates the request. </p>
 
-                <h4>How to create a API key in Openweather </h4>
+                <h3>How to create a API key in Openweather </h3>
                 <p>This is a straightforward one. You can easily follow. Create an account or if you have one login.  and navigate to the API section and generate a key. Then you can use the created  api key for your API request.</p>
 
-                <h4>API Response Example</h4>
+                <h3>API Response Example</h3>
                 <p>The response from the OpenWeather API will be a JSON object containing detailed weather information for the city which the user entered. </p>
 
                 <p>The data will be structured with keys like main, weather, and wind, providing values like temperature in Celsius, weather conditions (e.g., "clear sky"), and wind speed in meters per second.</p>
 
 
-                <h4>Displaying Weather Data</h4>
+                <h3>Displaying Weather Data</h3>
                 <p>Once the data is fetched, the app extracts the relevant details and displays them in a clean and readable format on the user interface. This is the full Javascript  source code for of our application</p>
 
-                <h4>Conclusion</h4>
+                <h3>Conclusion</h3>
                 <p>Finally as a Conclusion I can says that
                 This weather app provides users with an easy way to check the weather in any city using real-time data fetched from the OpenWeather API.
                 I suggest future enhancements to
