@@ -80,29 +80,243 @@
 
 
     <main>
-      
-      <section class="header-image">
-        <picture>
-          <source srcset="images/api-banner-picture-original-min.jpg 1920w,
+
+        <section class="header-image">
+            <picture>
+              <source srcset="images/api-banner-picture-original-min.jpg 1920w,
                           images/api-banner-picture-square-min.jpg 800w"
-                  sizes="(max-width: 60em) calc(100vw - 2.5rem), 57.5rem"
-                  media="(max-width: 37.5em)">
-          <img    src="images/api-banner-picture-1200-min.jpg"
-                  alt="banner-picture-with-api-title"
-                  srcset="images/api-banner-picture-original-min.jpg 1920w,
+                      sizes="(max-width: 60em) calc(100vw - 2.5rem), 57.5rem"
+                      media="(max-width: 37.5em)">
+              <img    src="images/api-banner-picture-1200-min.jpg"
+                      alt="banner-picture-with-api-title"
+                      srcset="images/api-banner-picture-original-min.jpg 1920w,
                        images/api-banner-picture-1200-min.jpg 1200w,
                        images/api-banner-picture-800w-min.jpg 800w,
                        images/api-banner-picture-400w-min.jpg 400w"
-                  sizes="(max-width: 25em) calc(100vw - 1.875rem),
+                      sizes="(max-width: 25em) calc(100vw - 1.875rem),
                        (max-width: 50em) calc(100vw - 3.75rem),
                        (max-width: 75em) calc(100vw - 3.75rem),
                        75em">
-        </picture>
-      </section>
+          </picture>
 
-      <section class="main-content"></section>
 
-      <section class="demonstration">
+        </section>
+
+        
+
+
+        <section class="main-content">
+
+            <h2> Web API</h2>
+            
+            <section class="what-is-it" id="what-is-web-api">
+                
+                <p>Hello Everyone! In this presentation, we will be diving into the world of APIs.</p>
+                <p>Have you ever gone to a website that lets you sign-in using your existing account from another website? That involves the work of APIs!</p>
+
+                <p>So What is Web API?</p>
+
+                <p>First, we should know what API is.
+                API stands for Application Programming Interface
+                It's an interface that provides a set of functions allowing different softwares to communicate with each other. </p>
+
+                <p>We can think of it as if we are in a restaurant. We order our food through the waiter, waiter goes to the kitchen and then comes back with the food we ordered. 
+                Likewise,
+                WE (the client) sends our request to the Server (the kitchen) through the help of the waiter (in this case the API) .</p>
+
+                <h3>What Is Web API?</h3>
+
+                <p>It is a specific type of API that operates over the web.  It operates using HTTP requests to enable communication between a web server and a client (a web browser, website etc.). One type of it is REST API .REST stands for “Representational State Transfer”. It's a standardized software architecture style that is industry known and used. Web companies use it, google, facebook, netflix.. </p>
+
+            </section>
+
+            <section class="why-would-you-use-it" id="data-formats">
+                <p>So how do you make requests using the REST API? </p>
+
+                <p>First you will need to choose the format of the data to communicate with the server. There are 2 commonly used data formats. JSON and XML.</p>
+
+                    <ul>
+                        <li>JSON is the most commonly used format today for its simplicity and compatibility with javascript. (show an example on the slide)</li>
+                        <li>XML on the other hand is less common but still used in the industry. It was popular back in the day because it looked like html. (example on the slide)</li>
+                        <li>These data formats will be used in sending and receiving data to and from the server through API.</li>
+                    </ul>
+
+                <p id="creating-web-api-requests">Then, you will also be provided an API key - lt's used to identify who's making the request. Which is basically like your ID.You also need endpoints, which are specific URLs where the API can be accessed to perform various tasks, like retrieving data or updating info on the server.  In that way API doesn't have to search the whole server but instead just target the specific part of it that has the information you need.</p>
+
+                <p>Then we will need to specify our request. These are done through the requests method. </p>
+                <ul>
+                    <li>POST: create (When you want to add data to the server)</li>
+                    <li>GET : read (When you want to get a specific information or data from the server)</li>
+                    <li>PUT: Update (When you want to modify or change something from the server)</li>
+                    <li>Delete: Delete  (When you want to delete a data from the server)</li>
+                </ul>
+
+                <p>Later in the demo we will see how this information will look like in coding.</p>
+
+                <p id="response-from-the-server">How will the Server respond?</p>
+
+                <p>First it will respond with a status code:</p>
+
+                <ul>
+                    <li>200-299 - request successful</li>
+                    <li>400-499 - there was an error on the clients end</li>
+                    <li>500-599 - there was an error on the servers end</li>
+                </ul>
+
+                <p>When request is successful, response will be translated in the data format you are using (JSON or XML)</p>
+
+            </section>
+                
+            <section class="why-would-you-use-it"> 
+
+                <h3>Why would you use REST API?</h3>
+
+                <p>Now that we know what REST APIs are, why would you use them?</p>
+
+                <dl>
+
+                    <dt id="ease-of-use">Ease of Use</dt>
+
+                    <dd>They're easy to understand. REST APIs use RESTful (or Clean) URLs, which are web addresses designed to be easy to read and understood by non-expert users (i.e. you, probably). These URLs are structured to reflect the resources they represent, making it intuitive for both users and developers.</dd>
+                
+                    Non-RESTful URL: [ getArticle?id=30&category=comments ]
+
+                    RESTful URL: [ /articles/30/comments ]
+
+                    <dt id="streamlined-experience">Streamlined Experienced</dt>
+
+                    <dd>They're convenient! A website asked if you wanted to log in using your Google account? Paid for something online using Paypal? Thats a REST API making your life easier. From the users perspective, APIs allow them to complete actions without ever leaving the website itself. </dd>
+
+                    <dt id="ready-made-solutions">Ready-Made Solutions</dt>
+
+                    <dd>They're cost-effective. Many problems you might run into when making your website may already have a third-party solution, so why waste time and money on developing your own API when you can choose from thousands of public APIs listed online? Many of these APIs are designed for easy integration, with the more popular ones often offering support, updates, and frequent bug fixes. Cut costs without cutting corners!</dd>
+                    
+                    <dt id="secure-and-protect">Secure and Protect </dt>
+
+                    <dd>They make your site more secure. Have you ever used the Inspect Element tool to read the content of a paywalled article? Neither have I. But if someone were to access restricted information on a website without permission, it would be terrible. Luckily, you can use a REST API to verify that users are who they say they are. Using the unique API key provided to the user, it ensures that users can only access what they are allowed to using Role-Based Access Control (RBAC). 
+
+                        <ul>
+                            <li>User Logs In: Authentication verifies their identity (e.g., via OAuth2).</li>
+                            <li>API Issues Token: User receives an API key.</li>
+                            <li>User Makes Request: They include the key in their request.</li>
+                            <li>API Checks Token: Verifies the token to identify the user.</li>
+                            <li>Authorization: API checks the user's role and permissions to determine if the requested action is allowed.</li>
+
+                    </ul>
+                    </dd>
+
+                </dl>
+
+                <p id="it-takes-a-village">It Takes a Village</p>
+
+                <p>Great, all these reasons why you should use REST APIs… but how do you actually make them? Or even just understand how they work? Thankfully, this area is not lacking in resources. From online guides and tutorials to Q&A sites and forums, every question you could have regarding APIs has at least 15 different answers. The abundance of documentation and community support makes it easier than ever for developers to learn, implement, and troubleshoot. If you don't know, then ask!</p>
+            
+            </section>
+
+            <section class="where-would-you-use-it" id="where-would-you-use-api">
+                <h3>Where Would You Use Web APIs?</h3>
+
+                <p id="social-media">For Social Media Web API, for example in Spotify and Airbnb, it allows you to integrate your social media accounts for a quick and easy log in and eliminates the need to remember new passwords. It also allows you to share your favourite playlists in spotify or share Airbnb listings to whoever you want. </p>
+                
+                <p id="google-maps">With Google Maps Web API, in the Airbnb listing, Google maps web api shows you exactly where the listing is on a map. It also gives the customer a complete idea of where they will be and what is in their surrounding area such as restaurants, nature, shops, or public transport. </p>
+                
+                <p id="tmdb">another Web API  that we will be using in this program is the TMDB Web API. As you all know already we will be using this to take the data such as movie data, ratings, trailers, release dates from the movie database and it will be displayed onto our movie database websites, </p>
+                
+                <p id="stripe">Stripe, an online payment processing platform easily handles all customer payment information, while reducing the risk of fraud by verifying customer through 2 factor authentication and never storing the information on a business's server 
+                it will send the confirmation of purchase and purchase details such as name, shipping address, and product info to the business to begin processing the order </p>
+                
+                
+                <p id="expedia">Expedia web api can access and book a wide range of travel products including flights, hotels, car rentals, etc. This API allows you to search, compare prices, and book travel accommodations in real time through your own website while using Expedia's travel database. </p>
+                
+            </section>
+
+            <section class="pros-and-cons" id="pros-and-cons">
+                <h3>The Pros of Web APIs:</h3>
+                
+                <h4>reduced development time </h4>
+                <p>developers can use existing apis to build web applications with specific functionalities instead of building from scratch. For example when building a food-ordering web app, you want to access a list of foods. If there wasn't an API available, then you would have to build it from scratch or create a database of foods in the application which would take a lot of time.</p>
+                
+                
+                <h4>better user experience</h4> 
+                <p>through displaying real time information, better security and privacy, increased functionalities,  and much more depending on the Web API you choose to use </p>
+                
+                
+                <h4>improved efficiency</h4> 
+                <p>as API driven infrastructures enable developers to reuse code and functionality from existing software systems, saving time and reducing the amount of code that needs to be written from scratch</p>
+                
+                
+                <h4>And Web APIs are cost effective </h4>
+                <p>because instead of having to develop the feature on your website you can use the web api</p> 
+                
+                
+                <h3>The Cons of Web APIs</h3> 
+                
+                <h4>Security Concerns</h4>
+                <p>There are, however, some cons to Web API. There are some security concerns as API infrastructures can be vulnerable to security breaches, which makes it incredibly important to implement security measures. </p>
+                
+                <h4>Compatibility</h4>
+                <p>There can be compatibility issues, as Web APIs can have issues between different versions of the same software, which can lead to system failures.</p>
+                
+                <h4>Dependency On Third Party Developers</h4>
+                <p>APIs also create a dependency on third party developers, as APIs rely on other developers to create applications that are integrated to your website which are outside of your control </p>
+                
+                <h4>Customization</h4>
+                <p>There is also limited customization, as you're using pre built functionalities offered by the API</p>
+                
+                <h4>Performance Issues</h4>
+                <p>And finally, there may be performance issues, such as network latency due to responsiveness of the API provider's servers, which may affect responsiveness of your website. There may sometimes be potential changes that may require you to update the API on your end as it may disrupt functionality if not handled properly </p>
+
+            </section>
+
+            <section class="demo" id="api-demo">
+
+                <h2>Web API Demonstration</h2>
+
+                <p>Now I hope you have a brief idea about what web API is and what it does, here we move to see how it works in the real world application. Here we implement a weather application which provides weather details for users. </p>
+                
+
+                <h4>Features of this application.</h4>
+                <p>This application uses the OpenWeather API to retrieve real-time weather information for any city. It allows users to input a city name and view the current weather conditions, all through a simple and user-friendly interface for a better user experience.</p>
+
+                <h4>How it works</h4>
+                <p>Main part of the application is API integration. Then  has app works in four steps:
+                Firstly   the user inputs a city name, then the app sends a request to the OpenWeather API,which responds with weather data, and finally the app displays the information on a webpage. This process allows users to easily view current weather conditions for any city.</p>
+
+                <h4>User interface</h4>
+                <p>This is the app user interface which we developed.
+                In the search bar user enter the city name and clicking getweather button, after brief loading , weather data of  related cities is displayed. 
+                For example, when I enter "Edmonton" and click the button, the app fetches real-time weather data from the OpenWeather API and displays the current weather details for Edmonton.
+                These details, such as temperature, humidity, and wind speed, are sourced directly from the OpenWeather API.</p>
+
+                <h4>Sample of API request format</h4>
+
+                <p>This is a GET request, here pass the parameters by using  query string.It includes a query parameter (q=London) specifying the city, and an API key (appid=your-api-key) that authenticates the request. </p>
+
+                <h4>How to create a API key in Openweather </h4>
+                <p>This is a straightforward one. You can easily follow. Create an account or if you have one login.  and navigate to the API section and generate a key. Then you can use the created  api key for your API request.</p>
+
+                <h4>API Response Example</h4>
+                <p>The response from the OpenWeather API will be a JSON object containing detailed weather information for the city which the user entered. </p>
+
+                <p>The data will be structured with keys like main, weather, and wind, providing values like temperature in Celsius, weather conditions (e.g., "clear sky"), and wind speed in meters per second.</p>
+
+
+                <h4>Displaying Weather Data</h4>
+                <p>Once the data is fetched, the app extracts the relevant details and displays them in a clean and readable format on the user interface. This is the full Javascript  source code for of our application</p>
+
+                <h4>Conclusion</h4>
+                <p>Finally as a Conclusion I can says that
+                This weather app provides users with an easy way to check the weather in any city using real-time data fetched from the OpenWeather API.
+                I suggest future enhancements to
+                include hourly and daily forecasts, add features for more weather parameters like pressure, visibility, etc., and improve UI/UX for better user experience.
+                </p>
+                    
+            </section>    
+
+        </section>
+
+
+        <section class="demonstration">
         <div class="weather-container">
           <h1>Weather Application</h1>
           <input type="text" id="city" placeholder="Enter city name" />
@@ -122,6 +336,9 @@
           </div>
         </div>
       </section>
+
+      <section class="references"></section>
+      
     </main>
 
     <footer></footer>
