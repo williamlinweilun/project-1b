@@ -94,6 +94,7 @@ section{
     box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
+	z-index:99;
 }
 
 .sidebar.open {
