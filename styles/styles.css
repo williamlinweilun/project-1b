@@ -172,7 +172,7 @@ a:hover {
 	.header-image {
 		/* padding-left is 20rem - referenced from side-bar's width 250px */
 		padding-left: 20rem;
-		padding-right: 2rem;
+		padding-right: 1rem;
 	}
 
 }
