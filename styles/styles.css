@@ -179,9 +179,9 @@ nav {
 @media (min-width: 50em) {
 
 	.header-image {
-		/* margin-left is 275px - referenced from side-bar's width 250px */
-		margin-left: 17.1875rem; 
-		margin-right: .9375rem;
+		/* padding-left is 20rem - referenced from side-bar's width 250px */
+		padding-left: 20rem;
+		padding-right: 1rem;
 	}
 
 }
@@ -189,13 +189,19 @@ nav {
 /* Main Content ----------------------------- */
 
 .main-content {
+    padding: 0 1.5rem;
 }
 
 @media (min-width: 50em) {
-	.main-content {
-		padding-left: 20rem;		
-	}
+    .main-content {
+        padding-left: 20rem;        
+    }
+}
 
+@media (min-width: 75em) {
+    .main-content {
+        padding-right: 15rem;
+    }
 }
 
 
