@@ -319,3 +319,17 @@ section{
 	/* end of the demontration section */
 /* Footer
 --------------------------------------------- */
+
+footer{
+	padding: 1rem;
+}
+
+footer p{
+	text-align: center;
+}
+
+@media (min-width: 50em) {
+	footer{
+		margin-left: 17.1875rem;
+	}
+}
