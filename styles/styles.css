@@ -86,7 +86,6 @@ nav {
     padding: 1.25rem;
     background-color: #283044;
     box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
-    border-right: .0625rem #798092 solid;
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
 	z-index:99;
@@ -101,28 +100,23 @@ nav {
 	padding: 0;
 }
 
-.main-topic {
-    font-weight: bold;
-    border-bottom: .0625rem #798092 solid;
+.sidebar li {
+    margin: .5rem;
 }
 
 .sub-topic {
-    font-size: .9rem;
-    margin: .5rem 0 .5rem 1rem;
+	padding: .5rem 0 .5rem 1rem;
 }
 
 .sidebar a {
     text-decoration: none;
     color: #ffffff;
-    padding: .5rem;
-    display: block;
-    width: calc(95% - 1.5rem);
-    background-color: transparent;
 }
 
-.sidebar a:hover {
+
+a:hover {
+    text-decoration: none;
     background-color: #414959;
-    border-radius: .4rem;
 }
 
 .toggle-button {
@@ -130,11 +124,8 @@ nav {
     position: fixed;
     left: .625rem;
     top: .625rem;
-    color: #ffffff;
-    background-color: #1F2634;
-    border: 1px #798092 solid;
-    border-radius: .5rem;
-    padding: .625rem .7rem .625rem .7rem;
+    border: none;
+    padding: .625rem;
     cursor: pointer;
     z-index: 1000;
     box-shadow: .125rem .125rem .3125rem rgba(0,0,0,0.1);
@@ -179,9 +170,9 @@ nav {
 @media (min-width: 50em) {
 
 	.header-image {
-		/* padding-left is 20rem - referenced from side-bar's width 250px */
-		padding-left: 20rem;
-		padding-right: 1rem;
+		/* margin-left is 275px - referenced from side-bar's width 250px */
+		margin-left: 17.1875rem; 
+		margin-right: .9375rem;
 	}
 
 }
@@ -201,8 +192,10 @@ nav {
 @media (min-width: 75em) {
     .main-content {
         padding-right: 15rem;
+        padding-left: 25rem;
     }
 }
+
 
 
 /* demostraion 
@@ -340,6 +333,7 @@ nav {
 /* Footer
 --------------------------------------------- */
 
+
 footer {
 	padding: 1rem;
 }
@@ -349,7 +343,7 @@ footer p {
 }
 
 @media (min-width: 50em) {
-	footer{
+	footer {
 		margin-left: 17.1875rem;
 	}
 }
