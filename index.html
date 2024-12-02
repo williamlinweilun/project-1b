@@ -48,7 +48,7 @@
 
             </section>
 
-            <section class="why-would-you-use-it">
+            <section class="why-would-you-use-it" id="data-formats">
                 <p>So how do you make requests using the REST API? </p>
 
                 <p>First you will need to choose the format of the data to communicate with the server. There are 2 commonly used data formats. JSON and XML.</p>
@@ -59,7 +59,7 @@
                         <li>These data formats will be used in sending and receiving data to and from the server through API.</li>
                     </ul>
 
-                <p>Then, you will also be provided an API key - lt's used to identify who's making the request. Which is basically like your ID.You also need endpoints, which are specific URLs where the API can be accessed to perform various tasks, like retrieving data or updating info on the server.  In that way API doesn't have to search the whole server but instead just target the specific part of it that has the information you need.</p>
+                <p id="creating-web-api-requests">Then, you will also be provided an API key - lt's used to identify who's making the request. Which is basically like your ID.You also need endpoints, which are specific URLs where the API can be accessed to perform various tasks, like retrieving data or updating info on the server.  In that way API doesn't have to search the whole server but instead just target the specific part of it that has the information you need.</p>
 
                 <p>Then we will need to specify our request. These are done through the requests method. </p>
                 <ul>
@@ -71,7 +71,7 @@
 
                 <p>Later in the demo we will see how this information will look like in coding.</p>
 
-                <p>How will the Server respond?</p>
+                <p id="response-from-the-server">How will the Server respond?</p>
 
                 <p>First it will respond with a status code:</p>
 
@@ -93,24 +93,23 @@
 
                 <dl>
 
-                    <dt>Ease of Use</dt>
+                    <dt id="ease-of-use">Ease of Use</dt>
 
                     <dd>They're easy to understand. REST APIs use RESTful (or Clean) URLs, which are web addresses designed to be easy to read and understood by non-expert users (i.e. you, probably). These URLs are structured to reflect the resources they represent, making it intuitive for both users and developers.</dd>
-                    
-                    FIXME:
+                
                     Non-RESTful URL: [ getArticle?id=30&category=comments ]
 
                     RESTful URL: [ /articles/30/comments ]
 
-                    <dt>Streamlined Experienced</dt>
+                    <dt id="streamlined-experience">Streamlined Experienced</dt>
 
                     <dd>They're convenient! A website asked if you wanted to log in using your Google account? Paid for something online using Paypal? Thats a REST API making your life easier. From the users perspective, APIs allow them to complete actions without ever leaving the website itself. </dd>
 
-                    <dt>Ready-Made Solutions</dt>
+                    <dt id="ready-made-solutions">Ready-Made Solutions</dt>
 
                     <dd>They're cost-effective. Many problems you might run into when making your website may already have a third-party solution, so why waste time and money on developing your own API when you can choose from thousands of public APIs listed online? Many of these APIs are designed for easy integration, with the more popular ones often offering support, updates, and frequent bug fixes. Cut costs without cutting corners!</dd>
                     
-                    <dt>Secure and Protect </dt>
+                    <dt id="secure-and-protect">Secure and Protect </dt>
 
                     <dd>They make your site more secure. Have you ever used the Inspect Element tool to read the content of a paywalled article? Neither have I. But if someone were to access restricted information on a website without permission, it would be terrible. Luckily, you can use a REST API to verify that users are who they say they are. Using the unique API key provided to the user, it ensures that users can only access what they are allowed to using Role-Based Access Control (RBAC). 
 
@@ -126,30 +125,30 @@
 
                 </dl>
 
-                <p>It Takes a Village</p>
+                <p id="it-takes-a-village">It Takes a Village</p>
 
                 <p>Great, all these reasons why you should use REST APIs… but how do you actually make them? Or even just understand how they work? Thankfully, this area is not lacking in resources. From online guides and tutorials to Q&A sites and forums, every question you could have regarding APIs has at least 15 different answers. The abundance of documentation and community support makes it easier than ever for developers to learn, implement, and troubleshoot. If you don't know, then ask!</p>
             
             </section>
 
-            <section class="why-would-you-use-it">
+            <section class="where-would-you-use-it" id="where-would-you-use-api">
                 <h3>Where Would You Use Web APIs?</h3>
 
-                <p>For Social Media Web API, for example in Spotify and Airbnb, it allows you to integrate your social media accounts for a quick and easy log in and eliminates the need to remember new passwords. It also allows you to share your favourite playlists in spotify or share Airbnb listings to whoever you want. </p>
+                <p id="social-media">For Social Media Web API, for example in Spotify and Airbnb, it allows you to integrate your social media accounts for a quick and easy log in and eliminates the need to remember new passwords. It also allows you to share your favourite playlists in spotify or share Airbnb listings to whoever you want. </p>
                 
-                <p>With Google Maps Web API, in the Airbnb listing, Google maps web api shows you exactly where the listing is on a map. It also gives the customer a complete idea of where they will be and what is in their surrounding area such as restaurants, nature, shops, or public transport. </p>
+                <p id="google-maps">With Google Maps Web API, in the Airbnb listing, Google maps web api shows you exactly where the listing is on a map. It also gives the customer a complete idea of where they will be and what is in their surrounding area such as restaurants, nature, shops, or public transport. </p>
                 
-                <p>another Web API  that we will be using in this program is the TMDB Web API. As you all know already we will be using this to take the data such as movie data, ratings, trailers, release dates from the movie database and it will be displayed onto our movie database websites, </p>
+                <p id="tmdb">another Web API  that we will be using in this program is the TMDB Web API. As you all know already we will be using this to take the data such as movie data, ratings, trailers, release dates from the movie database and it will be displayed onto our movie database websites, </p>
                 
-                <p>Stripe, an online payment processing platform easily handles all customer payment information, while reducing the risk of fraud by verifying customer through 2 factor authentication and never storing the information on a business's server 
+                <p id="stripe">Stripe, an online payment processing platform easily handles all customer payment information, while reducing the risk of fraud by verifying customer through 2 factor authentication and never storing the information on a business's server 
                 it will send the confirmation of purchase and purchase details such as name, shipping address, and product info to the business to begin processing the order </p>
                 
                 
-                <p>Expedia web api can access and book a wide range of travel products including flights, hotels, car rentals, etc. This API allows you to search, compare prices, and book travel accommodations in real time through your own website while using Expedia's travel database. </p>
+                <p id="expedia">Expedia web api can access and book a wide range of travel products including flights, hotels, car rentals, etc. This API allows you to search, compare prices, and book travel accommodations in real time through your own website while using Expedia's travel database. </p>
                 
             </section>
 
-            <section class="pros-and-cons">
+            <section class="pros-and-cons" id="pros-and-cons">
                 <h3>The Pros of Web APIs:</h3>
                 
                 <h4>reduced development time </h4>
@@ -187,7 +186,7 @@
 
             </section>
 
-            <section class="demo">
+            <section class="demo" id="api-demo">
 
                 <h2>Web API Demonstration</h2>
 
