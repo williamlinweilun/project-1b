@@ -76,11 +76,12 @@ nav {
     position: fixed;
     left: -18rem;
     top: 0;
-    width: 16rem;
+    width: 17.5rem;
     height: 100vh;
     padding: 1.25rem;
     background-color: #283044;
     box-shadow: .125rem 0 .3125rem rgba(0,0,0,0.1);
+    border-right: 1px #798092 solid;
     overflow-y: auto;
     transition: transform 0.3s ease, left 0.3s ease;
 	z-index:99;
@@ -95,23 +96,28 @@ nav {
 	padding: 0;
 }
 
-.sidebar li {
-    margin: .5rem;
+.sub-topic ul {
+    font-size: .8rem;
+    margin: .5rem 0 .5rem 0;
 }
 
-.sub-topic {
-	padding: .5rem 0 .5rem 1rem;
+.sidebar .sub-topic li {
+    margin-left: 1.5rem; 
 }
 
 .sidebar a {
     text-decoration: none;
     color: #ffffff;
+    padding: .5rem;
+    display: block;
+    width: calc(100% - 30px);
+    background-color: transparent;
 }
 
-
-a:hover {
-    text-decoration: none;
+.sidebar a:hover {
     background-color: #414959;
+    display: block;
+    width: 100%;
 }
 
 .toggle-button {
@@ -119,8 +125,11 @@ a:hover {
     position: fixed;
     left: .625rem;
     top: .625rem;
-    border: none;
-    padding: .625rem;
+    color: #ffffff;
+    background-color: #1F2634;
+    border: 1px #798092 solid;
+    border-radius: .5rem;
+    padding: .625rem .7rem .625rem .7rem;
     cursor: pointer;
     z-index: 1000;
     box-shadow: .125rem .125rem .3125rem rgba(0,0,0,0.1);
@@ -177,12 +186,11 @@ a:hover {
 .main-content {
 	font-family: "Roboto", sans-serif;
 	color: #ffffff;
-
+}
 
 
 /* demostraion 
 --------------------------------------------- */
-
 .demonstration {
 	background: url('../images/bg-demo.jpg') no-repeat center center/cover; 
 	background-color: #26aedb;
@@ -201,14 +209,13 @@ a:hover {
 } 
 
 .demonstration	.weather-container {
-
-  display: flex;
+    display: flex;
 	flex-direction: column;
 	justify-content: center;
 	gap: 1rem;
 	text-align: center;
 	background: rgb(157,209,210);
-  background: linear-gradient(0deg, rgba(157,209,210,1) 22%, rgba(33,163,207,1) 93%);
+    background: linear-gradient(0deg, rgba(157,209,210,1) 22%, rgba(33,163,207,1) 93%);
 	padding: 1.5rem;
 	border-radius: 10px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -297,71 +304,6 @@ a:hover {
 		padding: 1.5rem;
 		border-radius: 10px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-=======
-      display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  gap: 1rem;
-	  text-align: center;
-	  background: rgb(157,209,210);
-      background: linear-gradient(0deg, rgba(157,209,210,1) 22%, rgba(33,163,207,1) 93%);
-	  padding: 1.5rem;
-	  border-radius: 10px;
-	  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	  opacity: 0.8;
-	}
-	
-	.demonstration  #weatherResult h1 {
-	  font-size: 1.2rem;
-	  margin: 1rem 0rem  0rem;
-	}
-  
-	.demonstration #weatherResult h2 {
-	  font-size: 1.1rem;
-	  margin-bottom: 0.5rem;
-	  
-	}
-	
-	.demonstration input {
-	  padding: .5rem;
-	  font-size: 1rem;
-	  border: none;
-	  outline: none;
-	  border-radius: 4px;
-	  
-	}
-	
-	.demonstration button {
-	  padding: .5rem;
-	  font-size: 1rem;
-	  cursor: pointer;
-	  border: none;
-	  background-color: #2c3e50;
-	  color: white;
-	  border-radius: 4px;
-	}
-	
-	.demonstration #weatherResult p {
-  
-	  margin: 0.1rem 0;
-	}
-	.demonstration #cityName i{
-	  margin-right: 1rem;
-	  color: #2c3e50;
-	}
-  
-	.demonstration #feelLike, #description {
-	 font-size: 1.2rem;
-	}
-
-	.demonstration img {
-		width: 60%;
-	}
-	.demonstration .subforecasts {
-	  display: flex;
-	  justify-content: center;
-	  gap: 3rem;
-
 	}
     .demonstration input {
 		margin-right: .5rem;
@@ -376,41 +318,11 @@ a:hover {
 		width: 75%;
 	}
 
-
 }
-
-@media (min-width:50em) {
-	 .demonstration	{
-		padding: 2rem;
-		
-	} 
-	.demonstration	.weather-container {
-		display: inline-block;
-		justify-content: center;
-		padding: 1.5rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	  }
-      .demonstration input {
-		margin-right: .5rem;
-		
-	  }
-
-	  .demonstration  #weatherResult h1 {
-		font-size: 1.4rem;
-		margin: 1.5rem 0rem  0rem;
-	  }
-	  .demonstration img{
-		width: 75%;
-	}
-	  
-  }
-
 
 /* end of the demontration section */
 /* Footer
 --------------------------------------------- */
-
 
 footer {
 	padding: 1rem;
@@ -421,7 +333,7 @@ footer p {
 }
 
 @media (min-width: 50em) {
-	footer {
+	footer{
 		margin-left: 17.1875rem;
 	}
 }
