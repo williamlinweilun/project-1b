@@ -62,6 +62,14 @@
                         </li>
                         <li>
                             <div class="main-topic"><a href="#api-demo">API Demo</a></div>
+                            <ul class="sub-topic">
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#how-it-works">How it works</a></li>
+                                <li><a href="#api-request-format">API request format</a></li>
+                                <li><a href="#openweather">Openweather</a></li>
+                                <li><a href="#response-examples">Response Example</a></li>
+                                <li><a href="#displaying-weather-data">Displaying Weather Data</a></li>
+                                <li><a href="#conclusion">Conclusion</a></li>
                         </li>
                     </ul>
                 </nav>
@@ -185,7 +193,7 @@
 
                     <dd>They're cost-effective. Many problems you might run into when making your website may already have a third-party solution, so why waste time and money on developing your own API when you can choose from thousands of public APIs listed online? Many of these APIs are designed for easy integration, with the more popular ones often offering support, updates, and frequent bug fixes. Cut costs without cutting corners!</dd>
                     
-                    <dt id="secure-and-protect">Secure and Protect </dt>
+                    <dt id="secure-and-protect">Secure and Protect</dt>
 
                     <dd>They make your site more secure. Have you ever used the Inspect Element tool to read the content of a paywalled article? Neither have I. But if someone were to access restricted information on a website without permission, it would be terrible. Luckily, you can use a REST API to verify that users are who they say they are. Using the unique API key provided to the user, it ensures that users can only access what they are allowed to using Role-Based Access Control (RBAC). 
 
@@ -269,42 +277,42 @@
                 <p>Now I hope you have a brief idea about what web API is and what it does, here we move to see how it works in the real world application. Here we implement a weather application which provides weather details for users. </p>
                 
 
-                <h4>Features of this application.</h4>
+                <h4 id="features">Features of this application.</h4>
                 <p>This application uses the OpenWeather API to retrieve real-time weather information for any city. It allows users to input a city name and view the current weather conditions, all through a simple and user-friendly interface for a better user experience.</p>
 
-                <h4>How it works</h4>
+                <h4 id="how-it-works">How it works</h4>
                 <p>Main part of the application is API integration. Then  has app works in four steps:
                 Firstly   the user inputs a city name, then the app sends a request to the OpenWeather API,which responds with weather data, and finally the app displays the information on a webpage. This process allows users to easily view current weather conditions for any city.</p>
 
-                <h4>User interface</h4>
+                <h4 id="user-interface">User interface</h4>
                 <p>This is the app user interface which we developed.
                 In the search bar user enter the city name and clicking getweather button, after brief loading , weather data of  related cities is displayed. 
                 For example, when I enter "Edmonton" and click the button, the app fetches real-time weather data from the OpenWeather API and displays the current weather details for Edmonton.
                 These details, such as temperature, humidity, and wind speed, are sourced directly from the OpenWeather API.</p>
 
-                <h4>Sample of API request format</h4>
+                <h4 id="api-request-format">Sample of API request format</h4>
 
                 <p>This is a GET request, here pass the parameters by using  query string.It includes a query parameter (q=London) specifying the city, and an API key (appid=your-api-key) that authenticates the request. </p>
 
-                <h4>How to create a API key in Openweather </h4>
+                <h4 id="openweather">How to create a API key in Openweather </h4>
                 <p>This is a straightforward one. You can easily follow. Create an account or if you have one login.  and navigate to the API section and generate a key. Then you can use the created  api key for your API request.</p>
 
-                <h4>API Response Example</h4>
+                <h4 id="response-example">API Response Example</h4>
                 <p>The response from the OpenWeather API will be a JSON object containing detailed weather information for the city which the user entered. </p>
 
                 <p>The data will be structured with keys like main, weather, and wind, providing values like temperature in Celsius, weather conditions (e.g., "clear sky"), and wind speed in meters per second.</p>
 
 
-                <h4>Displaying Weather Data</h4>
+                <h4 id="displaying-weather-data">Displaying Weather Data</h4>
                 <p>Once the data is fetched, the app extracts the relevant details and displays them in a clean and readable format on the user interface. This is the full Javascript  source code for of our application</p>
 
-                <h4>Conclusion</h4>
+                <h4 id="conclusion">Conclusion</h4>
                 <p>Finally as a Conclusion I can says that
                 This weather app provides users with an easy way to check the weather in any city using real-time data fetched from the OpenWeather API.
                 I suggest future enhancements to
                 include hourly and daily forecasts, add features for more weather parameters like pressure, visibility, etc., and improve UI/UX for better user experience.
                 </p>
-                    
+                
             </section>    
 
         </section>
@@ -342,5 +350,5 @@
         <p>For Educational Purposes</p>
     </footer>
 </body>
-  
+
 </html>
