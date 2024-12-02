@@ -17,69 +17,69 @@ weatherResult.style.display = "none";
 
 // Event listener for the "Get Weather" button
 getWeatherBtn.addEventListener("click", function () {
-  const city = cityInput.value;
+    const city = cityInput.value;
 
-  if (!city) {
+    if (!city) {
     alert("Please enter a city name");
     return;
-  }
+    }
 
   // Fetch the weather data from the API
-  fetchWeatherData(city);
+    fetchWeatherData(city);
 });
 
 // Fetch weather data from OpenWeatherMap API
 function fetchWeatherData(city) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  fetch(url)
+    fetch(url)
     .then((response) => {
-      if (!response.ok) {
+        if (!response.ok) {
         throw new Error("City not found");
-      }
-      return response.json();
+        }
+        return response.json();
     })
     .then((data) => {
       //console.log(data);
       // Extract relevant data from the response
-      const { name, weather, main, wind } = data;
+        const { name, weather, main, wind } = data;
 
       // Update the HTML with the weather data
-      cityName.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${name}`;
-      temperature.innerHTML = ` ${Math.round(main.temp)} °C`;
-      description.innerHTML = ` ${weather[0].description}`;
-      humidity.innerHTML = `<i class="fa-solid fa-temperature-empty"></i><br/> ${main.humidity}% <br/><span>Humidity</span>`;
-      windSpeed.innerHTML = `<i class="fa-solid fa-wind"></i> <br/>${wind.speed} m/s<br/><span>Wind</span> `;
+        cityName.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${name}`;
+        temperature.innerHTML = ` ${Math.round(main.temp)} °C`;
+        description.innerHTML = ` ${weather[0].description}`;
+        humidity.innerHTML = `<i class="fa-solid fa-temperature-empty"></i><br/> ${main.humidity}% <br/><span>Humidity</span>`;
+        windSpeed.innerHTML = `<i class="fa-solid fa-wind"></i> <br/>${wind.speed} m/s<br/><span>Wind</span> `;
 
-      feelLike.innerHTML = `Feel Like: ${Math.round(main.feels_like)} °C`;
+        feelLike.innerHTML = `Feel Like: ${Math.round(main.feels_like)} °C`;
 
-      const imgiconSrc = `https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`;
+        const imgiconSrc = `https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`;
 
       // img adding
-      var imgIcon = document.createElement("img");
-      imgIcon.src = imgiconSrc;
-      weatherIcon.innerHTML = "";
-      weatherIcon.appendChild(imgIcon);
+        var imgIcon = document.createElement("img");
+        imgIcon.src = imgiconSrc;
+        weatherIcon.innerHTML = "";
+        weatherIcon.appendChild(imgIcon);
 
-      weatherResult.style.display = "block";
+        weatherResult.style.display = "block";
     })
     .catch((error) => {
       // Handle errors (e.g., city not found)
-      alert(error.message);
-      weatherResult.style.display = "none";
+        alert(error.message);
+        weatherResult.style.display = "none";
     });
 }
 
 //sidebar
 
 document.getElementById('toggle-button').addEventListener('click', function() {
-  var sidebar = document.getElementById('sidebar');
-  var button = document.getElementById('toggle-button');
-  if (sidebar.classList.contains('open')) {
-      sidebar.classList.remove('open');
-      button.classList.remove('open');
-  } else {
-      sidebar.classList.add('open');
-      button.classList.add('open');
-  }
+    var sidebar = document.getElementById('sidebar');
+    var button = document.getElementById('toggle-button');
+    if (sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+        button.classList.remove('open');
+    } else {
+        sidebar.classList.add('open');
+        button.classList.add('open');
+    }
 });
