@@ -17,6 +17,7 @@ weatherResult.style.display = "none";
 
 // Event listener for the "Get Weather" button
 getWeatherBtn.addEventListener("click", function () {
+<<<<<<< HEAD
     const city = cityInput.value;
 
     if (!city) {
@@ -26,10 +27,22 @@ getWeatherBtn.addEventListener("click", function () {
 
   // Fetch the weather data from the API
     fetchWeatherData(city);
+=======
+  const city = cityInput.value;
+
+  if (!city) {
+    alert("Please enter a city name");
+    return;
+  }
+
+  // Fetch the weather data from the API
+  fetchWeatherData(city);
+>>>>>>> 8d5de9038991c157c64a9fbcb3909a459908ef86
 });
 
 // Fetch weather data from OpenWeatherMap API
 function fetchWeatherData(city) {
+<<<<<<< HEAD
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -38,10 +51,21 @@ function fetchWeatherData(city) {
         throw new Error("City not found");
         }
         return response.json();
+=======
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("City not found");
+      }
+      return response.json();
+>>>>>>> 8d5de9038991c157c64a9fbcb3909a459908ef86
     })
     .then((data) => {
       //console.log(data);
       // Extract relevant data from the response
+<<<<<<< HEAD
         const { name, weather, main, wind } = data;
 
       // Update the HTML with the weather data
@@ -83,3 +107,32 @@ document.getElementById('toggle-button').addEventListener('click', function() {
         button.classList.add('open');
     }
 });
+=======
+      const { name, weather, main, wind } = data;
+
+      // Update the HTML with the weather data
+      cityName.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${name}`;
+      temperature.innerHTML = ` ${Math.round(main.temp)} °C`;
+      description.innerHTML = ` ${weather[0].description}`;
+      humidity.innerHTML = `<i class="fa-solid fa-temperature-empty"></i><br/> ${main.humidity}% <br/><span>Humidity</span>`;
+      windSpeed.innerHTML = `<i class="fa-solid fa-wind"></i> <br/>${wind.speed} m/s<br/><span>Wind</span> `;
+
+      feelLike.innerHTML = `Feel Like: ${Math.round(main.feels_like)} °C`;
+
+      const imgiconSrc = `https://openweathermap.org/img/wn/${weather[0].icon}@4x.png`;
+
+      // img adding
+      var imgIcon = document.createElement("img");
+      imgIcon.src = imgiconSrc;
+      weatherIcon.innerHTML = "";
+      weatherIcon.appendChild(imgIcon);
+
+      weatherResult.style.display = "block";
+    })
+    .catch((error) => {
+      // Handle errors (e.g., city not found)
+      alert(error.message);
+      weatherResult.style.display = "none";
+    });
+}
+>>>>>>> 8d5de9038991c157c64a9fbcb3909a459908ef86
