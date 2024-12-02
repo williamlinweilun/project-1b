@@ -102,12 +102,8 @@ nav {
 }
 
 .sub-topic {
-    margin: .5rem 0 .5rem 0;
-}
-
-.sub-topic li {
     font-size: .9rem;
-    margin-left: 1rem; 
+    margin: .5rem 0 .5rem 1rem;
 }
 
 .sidebar a {
