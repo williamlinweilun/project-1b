@@ -321,27 +321,37 @@
         </section>
 
 
-        <section class="demonstration">
+    <section class="demonstration">
 
-            <div class="weather-container">
-                <h1>Weather Application</h1>
-                <input type="text" id="city" placeholder="Enter city name" />
-                <button id="getWeatherBtn">Get Weather</button>
+                    <article class="weather-container">
+                            <header>
+                                <h1>Weather Application</h1>
+                            </header>
+                        
+                            <article class="weather-search">
+                            
+                                <input type="text" id="city" placeholder="Enter city name" />
+                                <button id="getWeatherBtn">Get Weather</button>
+                            </article>
+                    
+                            <aside id="weatherResult" class="weather-info">
+                                <h2 id="cityName"></h2>
+                                <p id="temperature"></p>
+                                <p id="feelLike"></p>
+                        
+                                <p id="description"></p>
+                                <figure id="weatherImage">
+                                    
+                                </figure>
+                        
+                                <div class="subforecasts">
+                                    <p id="humidity"></p>
+                                    <p id="windSpeed"></p>
+                                </div>
+                            </aside>
+                    </article>
 
-                <div id="weatherResult">
-                    <h1 id="cityName"></h1>
-                    <h2 id="temperature"></h2>
-                    <span id="feelLike"></span>
-
-                    <p id="description"></p>
-                    <p id="weatherImage"></p>
-                    <div class="subforecasts">
-                    <p id="humidity"></p>
-                    <p id="windSpeed"></p>
-                </div>
-        </div>
-
-    </section>
+       </section>
 
     <section class="references"></section>
 
